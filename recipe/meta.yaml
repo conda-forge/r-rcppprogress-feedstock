@@ -1,4 +1,4 @@
-{% set version = '0.3' %}
+{% set version = "0.4" %}
 {% set native = 'm2w64-' if win else '' %}
 
 package:
@@ -10,7 +10,7 @@ source:
   url:
     - https://cran.r-project.org/src/contrib/RcppProgress_{{ version }}.tar.gz
     - https://cran.r-project.org/src/contrib/Archive/RcppProgress/RcppProgress_{{ version }}.tar.gz
-  sha256: 3de5dc47cc2f9e839f92355c463289531e8c13806e54c7438f63c7c34378261d
+  sha256: 3b1ecc82ced98eb481819a28737dac3658586e11ad16a92abd14c4649ae15e25
 
 build:
   number: 0
