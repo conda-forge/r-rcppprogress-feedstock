@@ -23,6 +23,7 @@ requirements:
   build:
     - r-base
     - r-rcpp >=0.9.4
+    - r-devtools
     - posix                # [win]
     - {{native}}toolchain  # [win]
     - gcc                  # [not win]
@@ -30,6 +31,7 @@ requirements:
   run:
     - r-base
     - r-rcpp >=0.9.4
+    - r-devtools
 
 test:
   commands:
