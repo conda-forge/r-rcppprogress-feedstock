@@ -3,7 +3,7 @@ About r-rcppprogress
 
 Home: https://github.com/kforner/rcpp_progress
 
-Package license: GPL-3
+Package license: GPL (>= 3)
 
 Feedstock license: BSD 3-Clause
 
@@ -14,9 +14,15 @@ Summary: Allows to display a progress bar in the R console for long running comp
 Current build status
 ====================
 
-[![Linux](https://img.shields.io/circleci/project/github/conda-forge/r-rcppprogress-feedstock/master.svg?label=Linux)](https://circleci.com/gh/conda-forge/r-rcppprogress-feedstock)
-[![OSX](https://img.shields.io/travis/conda-forge/r-rcppprogress-feedstock/master.svg?label=macOS)](https://travis-ci.org/conda-forge/r-rcppprogress-feedstock)
-[![Windows](https://img.shields.io/appveyor/ci/conda-forge/r-rcppprogress-feedstock/master.svg?label=Windows)](https://ci.appveyor.com/project/conda-forge/r-rcppprogress-feedstock/branch/master)
+
+<table><tr><td>All platforms:</td>
+    <td>
+      <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=1520&branchName=master">
+        <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/r-rcppprogress-feedstock?branchName=master">
+      </a>
+    </td>
+  </tr>
+</table>
 
 Current release info
 ====================
@@ -49,6 +55,8 @@ conda search r-rcppprogress --channel conda-forge
 
 About conda-forge
 =================
+
+[![Powered by NumFOCUS](https://img.shields.io/badge/powered%20by-NumFOCUS-orange.svg?style=flat&colorA=E1523D&colorB=007D8A)](http://numfocus.org)
 
 conda-forge is a community-led conda channel of installable packages.
 In order to provide high-quality builds, the process has been automated into the
@@ -104,3 +112,10 @@ In order to produce a uniquely identifiable distribution:
  * If the version of a package **is** being increased, please remember to return
    the [``build/number``](https://conda.io/docs/user-guide/tasks/build-packages/define-metadata.html#build-number-and-string)
    back to 0.
+
+Feedstock Maintainers
+=====================
+
+* [@conda-forge/r](https://github.com/conda-forge/r/)
+* [@rvalieris](https://github.com/rvalieris/)
+
