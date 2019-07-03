@@ -1,4 +1,5 @@
-{% set version = "0.4" %}
+{% set version = '0.4.1' %}
+{% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
 package:
@@ -6,54 +7,61 @@ package:
   version: {{ version|replace("-", "_") }}
 
 source:
-  fn: RcppProgress_{{ version }}.tar.gz
   url:
-    - https://cran.r-project.org/src/contrib/RcppProgress_{{ version }}.tar.gz
-    - https://cran.r-project.org/src/contrib/Archive/RcppProgress/RcppProgress_{{ version }}.tar.gz
-  sha256: 706e14360dbc5976db05c2ac6692c3279c0f8c95e72bf9d4becd9e1348025e3e
+    - {{ cran_mirror }}/src/contrib/RcppProgress_{{ version }}.tar.gz
+    - {{ cran_mirror }}/src/contrib/Archive/RcppProgress/RcppProgress_{{ version }}.tar.gz
+  sha256: 11764105922f763d4c75c502599ec7dcc2fd629a029964caf53f98b41d0c607a
 
 build:
   merge_build_host: True  # [win]
-  number: 1002
-  skip: true  # [win32]
+  number: 0
+  noarch: generic
   rpaths:
     - lib/R/lib/
     - lib/
 
 requirements:
   build:
-    - posix                # [win]
-    - {{ compiler('c') }}        # [unix]
-    - {{ compiler('m2w64_c') }}  # [win]
-    - {{ compiler('cxx') }}        # [unix]
-    - {{ compiler('m2w64_cxx') }}  # [win]
+    - {{posix}}zip               # [win]
   host:
     - r-base
-    - r-rcpp >=0.9.4
-    - r-devtools
-
   run:
     - r-base
-    - r-rcpp >=0.9.4
-    - r-devtools
 
 test:
   commands:
-    - $R -e "library('RcppProgress')"  # [not win]
+    - $R -e "library('RcppProgress')"           # [not win]
     - "\"%R%\" -e \"library('RcppProgress')\""  # [win]
 
 about:
   home: https://github.com/kforner/rcpp_progress
-  license: GPL-3
+  license: GPL (>= 3)
   summary: Allows to display a progress bar in the R console for long running computations taking
     place in c++ code, and support for interrupting those computations even in multithreaded
     code, typically using OpenMP.
-  license_family: GPL
+  license_family: GPL3
+  license_file: '{{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3'
 
 extra:
   recipe-maintainers:
-    - dpryan79
-    - bgruening
-    - daler
-    - johanneskoester
     - rvalieris
+    - conda-forge/r
+
+# Package: RcppProgress
+# Maintainer: Karl Forner <karl.forner@gmail.com>
+# License: GPL (>= 3)
+# Title: An Interruptible Progress Bar with OpenMP Support for C++ in R Packages
+# Type: Package
+# LazyLoad: yes
+# Author: Karl Forner <karl.forner@gmail.com>
+# Description: Allows to display a progress bar in the R console for long running computations taking place in c++ code, and support for interrupting those computations even in multithreaded code, typically using OpenMP.
+# URL: https://github.com/kforner/rcpp_progress
+# BugReports: https://github.com/kforner/rcpp_progress/issues
+# Version: 0.4.1
+# Date: 2018-05-11
+# Suggests: RcppArmadillo, devtools, roxygen2, testthat
+# RoxygenNote: 6.0.1
+# NeedsCompilation: no
+# Packaged: 2018-05-11 13:15:30 UTC; karl
+# Repository: CRAN
+# Date/Publication: 2018-05-11 14:46:14 UTC
