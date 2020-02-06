@@ -1,4 +1,4 @@
-{% set version = '0.4.1' %}
+{% set version = "0.4.2" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,11 +10,11 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/RcppProgress_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/RcppProgress/RcppProgress_{{ version }}.tar.gz
-  sha256: 11764105922f763d4c75c502599ec7dcc2fd629a029964caf53f98b41d0c607a
+  sha256: b1624b21b7aeb1dafb30f092b2a4bef4c3504efd2d6b00b2cdf55dc9df194b48
 
 build:
   merge_build_host: True  # [win]
-  number: 1
+  number: 0
   noarch: generic
   rpaths:
     - lib/R/lib/
