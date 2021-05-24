@@ -35,17 +35,18 @@ test:
 
 about:
   home: https://github.com/kforner/rcpp_progress
-  license: GPL (>= 3)
+  license: GPL-3.0-or-later
   summary: Allows to display a progress bar in the R console for long running computations taking
     place in c++ code, and support for interrupting those computations even in multithreaded
     code, typically using OpenMP.
   license_family: GPL3
-  license_file: '{{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3'
+  license_file:
+    - {{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3
 
 extra:
   recipe-maintainers:
-    - rvalieris
     - conda-forge/r
+    - rvalieris
 
 # Package: RcppProgress
 # Maintainer: Karl Forner <karl.forner@gmail.com>
