@@ -3,7 +3,7 @@ About r-rcppprogress
 
 Home: https://github.com/kforner/rcpp_progress
 
-Package license: GPL (>= 3)
+Package license: GPL-3.0-or-later
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-rcppprogress-feedstock/blob/master/LICENSE.txt)
 
