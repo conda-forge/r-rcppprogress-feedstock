@@ -1,11 +1,11 @@
-About r-rcppprogress
-====================
+About r-rcppprogress-feedstock
+==============================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-rcppprogress-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/kforner/rcpp_progress
 
 Package license: GPL-3.0-or-later
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-rcppprogress-feedstock/blob/main/LICENSE.txt)
 
 Summary: Allows to display a progress bar in the R console for long running computations taking place in c++ code, and support for interrupting those computations even in multithreaded code, typically using OpenMP.
 
